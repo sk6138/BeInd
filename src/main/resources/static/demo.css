@@ -1,0 +1,114 @@
+@charset "ISO-8859-1";
+.compare-card {
+    border: 1px solid rgb(186, 185, 185);
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 40%;
+}
+
+.img-product {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.compare-card-inside {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.compare-card-divider {
+    width: 57%;
+}
+
+.compare-card-logo {
+    height: 40px;
+    padding: 2px;
+}
+
+.table-logo {
+    width: 100%;
+
+
+}
+
+.table-logo tr td {
+    width: 40%;
+}
+
+.table-logo tr {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.compare-card-button {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.compare-card-button:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+.compare-card-price {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.card-icon {
+    width: 20px;
+    margin: 5px;
+}
+
+.key-table tr td {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.key-specification {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.key-table {
+
+    table-layout: fixed;
+    width: 100%;
+}
+
+.key-table tr td {
+
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+
+
+}
+
+.key-table tr {
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 667px) {
+    .compare-card-inside {
+        display: block !important;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .card-icon {
+        width: 15px;
+        margin: 5px;
+    }
+
+    .compare-card-divider {
+        width: 100%;
+    }
+}
