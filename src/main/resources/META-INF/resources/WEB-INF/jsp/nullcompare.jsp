@@ -470,121 +470,50 @@ margin-top: 15px;
     </nav>
 
    
+    <div class="category-heading my-4">
+<h3>Product Categories</h3>
+</div>
+<div class="category-container mb-5">
     
-    
-    
-    
-  
-  
-  
-  
-  
-  
-  
-    <div class="container compare-card my-5 mb-5">
-        <div class="d-flex compare-card-inside">
-             <div class="product-image d-flex"><img src="image/category-headphones.jpg" alt="" class="img-product"></div> 
-            <div class="compare-card-divider">
-            <c:forEach items="${alls}" var="all"> 
-                <div>
-                    <p class="fs-4 fw-bold">${all.modelName}</p>
+    <div class="inside-category-container">
+        <div class="inside-category-divider">
+            <div class="category-card category-card-1">
+                <div class="category-card-hover">
+                    <span> <a href="/phone">SMART PHONES</a></span>
                 </div>
-                <div class="">
-                    <table class=" table-logo">
-                        <tr>
-                            <!--  <td><img src="image/a1.jpeg" alt="" class="compare-card-logo"></td>  -->
-                            <td>
-                                <p class="compare-card-price">&#8377; ${all.price}</p>
-                            </td>
-                            <td><a href="${all.link}"><button class=" compare-card-button bg-dark text-light" >Flipkart STORE ></button></a></td>
-                        </tr>
-                    </table>
+            </div>
+
+            <div class="category-card category-card-2">
+                <div class="category-card-hover">
+                     <span> <a href="/laptop">LAPTOPS</a></span>
                 </div>
-                <div class="my-4 ">
-                    <div class="mb-2 key-specification"> KEY SPECIFICATION</div>
-                    <table class=" key-table">
-                    
-                    <tr>
-                        <td><img class="card-icon" src="image/processor.png" alt=""><span>${all.ram}</span></td>
-                        <td><img class="card-icon" src="image/ram.png" alt=""><span>${all.rom}</span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/display-size.png" alt=""><span>${all.processor}</span></td>
-                        <td><img class="card-icon" src="image/sim.png" alt=""><span>${all.display}</span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span>${all.camera}</span></td>
-                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span>${all.sim}</span></td>
-                        
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/lighting.png" alt=""><span>${all.battery}</span></td>
-                        <td><img class="card-icon" src="image/android.png" alt=""><span>${all.networktype}</span></td>
-                    </tr>
-                    </table>
+            </div>
+        </div>
+        <div class="inside-category-divider">
+            <div class="category-card category-card-3">
+                <div class="category-card-hover">
+                     <span> <a href="/EarBuds">EARBUDS</a></span>
                 </div>
-                </c:forEach> 
+            </div>
+            <div class="category-card category-card-4">
+                <div class="category-card-hover">
+                     <span> <a href="/speaker">SPEAKERS</a></span>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-    <div class="container compare-card my-5 mb-5">
-        <div class="d-flex compare-card-inside">
-            <!-- <div class="product-image d-flex"><img src="image/category-headphones.jpg" alt="" class="img-product"></div> -->
-            <div class="compare-card-divider">
-            <c:forEach items="${all2s}" var="all2"> 
-                <div>
-                    <p class="fs-4 fw-bold">${all2.modelName}</p>
-                </div>
-                <div class="">
-                    <table class=" table-logo">
-                        <tr>
-                             <td><img src="image/a1.jpeg" alt="" class="compare-card-logo"></td> 
-                            <td>
-                                <p class="compare-card-price">&#8377; ${all2.price}</p>
-                            </td>
-                            <td><a href="${all2.link}"><button class=" compare-card-button bg-dark text-light" >Amazon STORE ></button></a></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="my-4 ">
-                    <div class="mb-2 key-specification"> KEY SPECIFICATION</div>
-                    <table class=" key-table">
-                    
-                    <tr>
-                        <td><img class="card-icon" src="image/processor.png" alt=""><span>${all2.processor}</span></td>
-                        <td><img class="card-icon" src="image/ram.png" alt=""><span>${all2.ram}</span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/display-size.png" alt=""><span>${all2.display}</span></td>
-                        <td><img class="card-icon" src="image/sim.png" alt=""><span>${all2.sim}</span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span>${all2.camera}</span></td>
-                        
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/lighting.png" alt=""><span>${all2.battery}</span></td>
-                        <td><img class="card-icon" src="image/android.png" alt=""><span>${all2.networktype}</span></td>
-                    </tr>
-                    </table>
-                </div>
-                </c:forEach> 
-            </div>
-        </div>
-    </div>
+</div>
     
     
-   
-
-
-
-
-
+    
+    <H1>Product Not Found!</H1>
+  
+  
+  
+  
+  
+  
+  
    
     
  

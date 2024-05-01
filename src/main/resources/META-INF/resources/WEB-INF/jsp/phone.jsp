@@ -8,7 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SMART PHONES</title>
+    <link rel="shortcut icon" href="image/logo-no-background.png" />
     <link rel="stylesheet" href="index.css" type="text/css">
     <link rel="stylesheet" href="category.css" type="text/css">
     <link rel="stylesheet" href="compare.css" type="text/css">
@@ -19,14 +20,30 @@
         crossorigin="anonymous"></script>
  
 </head>
-  
+  <style>
+  a{
+	color: inherit;
+	text-decoration: inherit;
+}
+.card-img-top{
+
+  width:270px;
+  height: 300px; 
+  margin:auto;
+  object-fit: contain;
+
+}
+</style>
 
 <body class="">
 
 
     
 
-    <nav class="navbar navbar-expand-lg  bg-dark border-bottom border-body" data-bs-theme="dark">
+    
+    <!-- ------------------------Nav Bar---------------------------------- -->
+
+    <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="m-2 ">
             <a class="ms-2  " href="/">
                 <img src="/image/logo-no-background.png" alt="Bootstrap" width="60">
@@ -52,9 +69,10 @@
                             Products
                         </a>
                         <ul class="dropdown-menu">
+                            
                            <li><a class="dropdown-item" href="/phone" id="nh">Smart Phone</a></li>
-                            <li><a class="dropdown-item" href="/laptop" id="nh">Laptop</a></li>
-                            <li><a class="dropdown-item" href="/EarBuds" id="nh">EarBuds</a></li>
+                            <li><a class="dropdown-item" href="/laptop" id="nh">Headphone</a></li>
+                            <li><a class="dropdown-item" href="#" id="nh">EarBuds</a></li>
                             <li><a class="dropdown-item" href="/speaker" id="nh">Speaker</a></li>
                         </ul>
                     </li>
@@ -62,38 +80,109 @@
                         <a class="nav-link " href="#about" id="nh">About</a>
                     </li>
                 </ul>
-              
-                <form class="d-flex " role="search" method="post" action="/all">
+                <form class="d-flex " role="search" method="post" action="/search">
                     <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn btn-outline-light btn-dark" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
+    
 
-    </div>
-
-<div class="carousel" style="width: 100%; height: 70vh; border: none;">
+<!-- <div class="carousel" style="width: 100%; height: 70vh; border: none;">
     
     <img class="carousel-image" src="image/c4.png" alt="Image 1">
     <img class="carousel-image" src="image/c2.png" alt="Image 2">
     <img class="carousel-image" src="image/c3.png" alt="Image 3">
     
 </div>
-<script src="index.js"></script>
+<script src="index.js"></script> -->
 
 
 
 
 
-<h1>phone list</h1>
-
-
-
-		
- <div class="container ">
+<%-- <div class="container p-h-m my-3" >
+    <h4 id="smartphonelink">SMART PHONES</h4>
+</div>
+ <div class="container mb-3">
     <div class="row  ">
+    <c:forEach items="${phone}" var="phones"> 
+    
+        <div class="col coll">
+        <a href="/${phones.modelName}" >
+	 
+            <div class="card" style="width: 18rem;">
+          
+                    <img src="image/category-smartphones.jpg" class="card-img-top" alt="...">
+                
+               <img width="100" height="100" src="getStudentPhoto/<c:out value='${phones.id}'/>">
+                <div class="card-body">
+                    <h5 class="card-title">${phones.modelName}</h5>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                 <li class="list-group-item">${phones.ram}</li>
+                    <li class="list-group-item">${phones.rom}</li>
+                    <li class="list-group-item">${phones.processor} </li>
+                    <li class="list-group-item">${phones.battery} </li>
+                    <li class="list-group-item">${phones.networktype} </li>
+                    
+                </ul>
+               
+            </div>
+            
+               </a>
+        </div>
+      
+        </c:forEach> 
+       
+    </div>
+</div>
+ --%>
+
+
+   
+
+  <div class="container mb-3 my-3">
+    <div class="row  ">
+    <c:forEach items="${phone2}" var="phones2"> 
+    
+        <div class="col coll">
+        <a href="/${phones2.modelName}" >
+        
+	 
+            <div class="card" style="width: 18rem;">
+                <img src="image/p${ phones2.id}.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${phones2.modelName}</h5>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                 <li class="list-group-item">${phones2.ram}</li>
+                    <li class="list-group-item">${phones2.rom}</li>
+                    <li class="list-group-item">${phones2.processor} </li>
+                    <li class="list-group-item">${phones2.battery} </li>
+                    <li class="list-group-item">${phones2.networktype} </li>
+                    
+                </ul>
+               
+            </div>
+            
+              </a>
+        </div>
+       
+        </c:forEach> 
+       
+    </div>
+</div>
+ 
+
+
 		
+<%--  <div class="container ">
+    <div class="row  ">
+		 
 			  <c:forEach items="${phone}" var="phones">
 				<a href="/${phones.modelName}/${phones.ram}/${phones.rom}" >
 				 <div class="col coll">
@@ -149,7 +238,7 @@
 		
 			
 			</div>
-			</div>
+			</div> --%>
 
 		
 
@@ -173,7 +262,7 @@
                     <div class="contact-info"><br>
                         <h3>Quick Contact</h3>
                         <form class="contact-form" method="post" name="contact_frm" id="contact_frm"
-                            action="https://formspree.io/f/xrgdzbvl">
+                            action="/contact">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="md-form mb-0"><input type="text" id="name" name="name"
@@ -264,7 +353,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-2 "><a class="nav-link " style="color: rgb(210, 210, 210);" href="#" id="fh">Home</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#contact" id="fh">Contact</a></li>
-                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="/docs/5.3/examples/" id="fh">Products</a></li>
+                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#" id="fh">Products</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#about" id="fh">About</a></li>
 
                     </ul>

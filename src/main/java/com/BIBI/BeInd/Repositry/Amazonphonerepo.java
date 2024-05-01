@@ -20,7 +20,7 @@ public interface Amazonphonerepo  extends JpaRepository<AmazonPhone, String>{
 	
 	  public List<AmazonPhone> findByDescriptionContainingIgnoreCase (String query);
 
-	  public AmazonPhone findByModelNameAndRamAndRom (String modelname,String ram,String rom);
+	  public AmazonPhone findByModelName(String modelname);
 
 	
 	 

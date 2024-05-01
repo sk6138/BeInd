@@ -1,37 +1,430 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="ISO-8859-1">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EARBUDS</title>
-    <link rel="shortcut icon" href="image/logo-no-background.png" />
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <link rel="stylesheet" href="compare.css" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+<title>Compare Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-   
+        <link rel="stylesheet" href="demo.css" type="text/css">
 </head>
  <style>
-  a{
+
+.category-container{
+    width: 100%;
+   height: 20vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inside-category-container{
+    width: 88%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+        
+}
+.inside-category-divider{
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.category-card{
+    width: 49%;
+    height: 100%;
+    font-size: 1.1rem;
+font-weight: 700;
+
+}
+a{
 	color: inherit;
 	text-decoration: inherit;
 }
-</style>
+
+.category-card-hover{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   color: transparent;
+}
+.category-card-hover:hover{
+    background-color: rgba(255, 255, 255, 0.678);
+    color: #808080;
+}
+.category-card-1{
+background-image: url(image/category-smartphones.jpg);
+background-size: cover;
+
+
+}
+
+.category-card-2 {
+    background-image: url(image/category-headphones.jpg);
+    background-size: cover;
+    
+    
+}
+.category-card-3 {
+    background-image: url(image/category-earbuds.jpg);
+    background-size: cover;
+    
+    
+}
+.category-card-4 {
+    background-image: url(image/category-speaker.jpg);
+    background-size: cover;
+    
+    
+}
+
+@media screen and (max-width: 992px) {
+    .category-card {
+            
+            font-size: 0.7rem;
+            font-weight: 600;
+    
+        }
+}
+@media screen and (max-width: 667px) {
+    .inside-category-container {
+        width: 100%;
+        display: block;
+        
+       
+
+    }
+    .inside-category-divider{
+        width: 100%;
+        margin-bottom: 7px;
+    }
+
+    
+}
+@media screen and (max-width: 500px) {
+    .category-card {
+
+        font-size: 0.5rem;
+        font-weight: 600;
+
+    }
+}
+
+
+.category-heading{
+display: flex;
+justify-content: center;
+margin-top: 15px;
+}
+
+@media screen and (max-width: 667px) {
+    .p-h-m{
+        margin-top: 100px;
+    }
+}
+
+.coll:hover{
+  translate: 0px -8px;
+}
+
+
+
+
+
+.inside-compare-card-container {
+    justify-content: space-between;
+}
+
+.d-flex-compare-card {
+    display: flex;
+}
+
+.mobile-compare-card {
+    width: 32%;
+    background-color: rgb(241, 245, 245);
+    border-radius: 20px;
+}
+
+.mobile-compare-card-1 img {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 667px) {
+    .d-flex-compare-card {
+        display: block;
+    }
+
+    .mobile-compare-card {
+        width: 85vw;
+
+    }
+
+    .goto {
+        padding-bottom: 20px;
+    }
+
+    .amazon-text {
+        padding-top: 20px;
+    }
+}
+
+.amazon-text {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#fh:hover {
+    color: rgb(253, 88, 17) !important;
+}
+
+#nh:hover {
+    color: rgb(253, 88, 17) !important;
+}
+#nh{
+    color: white;
+}
+
+
+
+.carousel {
+    width: 100%;
+    /* max-width: 600px; */
+    /* Adjust width as needed */
+    margin: 0 auto;
+    /* Center the carousel */
+    overflow: hidden;
+    position: relative;
+    translate: 0px -1px;
+    
+}
+
+
+.carousel-image {
+    width: 100%;
+    display: none;
+    /* object-fit: fill; */
   
+    /* Hide all images by default */
+}
 
-<body class="">
+.carousel-image.active {
+    display: block;
+    /* Display active image */
+}
 
-    <!-- ------------------------Nav Bar---------------------------------- -->
 
-    <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
+
+.button-show-all{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    /*z-index: -1 !important;*/
+    justify-content: center;
+}
+
+   .compare-card {
+    border: 1px solid rgb(186, 185, 185);
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 40%;
+}
+
+.img-product {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.compare-card-inside {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.compare-card-divider {
+    width: 57%;
+}
+
+.compare-card-logo {
+    height: 40px;
+    padding: 2px;
+}
+
+.table-logo {
+    width: 100%;
+
+
+}
+
+.table-logo tr td {
+    width: 40%;
+}
+
+.table-logo tr {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.compare-card-button {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.compare-card-button:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+.compare-card-price {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.card-icon {
+    width: 20px;
+    margin: 5px;
+}
+
+.key-table tr td {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.key-specification {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.key-table {
+
+    table-layout: fixed;
+    width: 100%;
+}
+
+.key-table tr td {
+
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+
+
+}
+
+.key-table tr {
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 667px) {
+    .compare-card-inside {
+        display: block !important;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .card-icon {
+        width: 15px;
+        margin: 5px;
+    }
+
+    .compare-card-divider {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f4f4f4;
+     margin: 0;
+     padding: 0;
+ }
+
+ h2 {
+     text-align: center;
+     color: #333;
+ }
+
+ /* form {
+     max-width: 600px;
+     margin: 20px auto;
+     background: #fff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ } */
+
+ label {
+     display: block;
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ input[type="text"],
+ input[type="url"],
+ input[type="number"],
+ textarea {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+
+ textarea {
+     resize: vertical;
+     height: 100px;
+ }
+
+ input[type="submit"] {
+     background-color: #4caf50;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     width: 100%;
+     font-size: 16px;
+ }
+
+ input[type="submit"]:hover {
+     background-color: #45a049;
+ }
+    
+</style> 
+<body>
+
+
+       <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="m-2 ">
             <a class="ms-2  " href="/">
                 <img src="/image/logo-no-background.png" alt="Bootstrap" width="60">
@@ -59,8 +452,8 @@
                         <ul class="dropdown-menu">
                             
                            <li><a class="dropdown-item" href="/phone" id="nh">Smart Phone</a></li>
-                            <li><a class="dropdown-item" href="/laptop" id="nh">Headphone</a></li>
-                            <li><a class="dropdown-item" href="#" id="nh">EarBuds</a></li>
+                            <li><a class="dropdown-item" href="/laptop" id="nh">Laptop</a></li>
+                            <li><a class="dropdown-item" href="/EarBuds" id="nh">EarBuds</a></li>
                             <li><a class="dropdown-item" href="/speaker" id="nh">Speaker</a></li>
                         </ul>
                     </li>
@@ -76,79 +469,58 @@
         </div>
     </nav>
 
-
-
+   
+   <!--  model.addAttribute("Aspeakers", Aspeakers2);
+		model.addAttribute("Aheadphones", Aheadphones2);
+		model.addAttribute("Aearbuds", Aearbuds2);
+		model.addAttribute("Fheadphones", Fheadphones2);
+		model.addAttribute("Fearbuds", Fearbuds2);
+		model.addAttribute("Fspeakers", Fspeakers2);
+		model.addAttribute("alls", all);
+		model.addAttribute("all2s", all2); -->
     
+    
+    
+  
+  
+  
+  
+    <div class="container compare-card my-5 mb-5">
+        <div class="d-flex compare-card-inside">
+            <div class="product-image d-flex"><img src="image/category-headphones.jpg" alt="" class="img-product"></div>
+            <div class="compare-card-divider">
+            
+             
+    
+  
+      
+ 
+     
+     <h2 style="color:gray;">NOT FOUND</h2>
+     
+     
+    
+     
+     
+     
+     
+            
+           
+            </div>
+        </div>
+    </div>
+
+
+
+
 
    
 
-<!-- <div class="carousel" style="width: 100%; height: 70vh; border: none;">
-    
-    <img class="carousel-image" src="image/c4.png" alt="Image 1">
-    <img class="carousel-image" src="image/c2.png" alt="Image 2">
-    <img class="carousel-image" src="image/c3.png" alt="Image 3">
-    
-</div>
-<script src="index.js"></script> -->
-
-<!-- model.addAttribute("amzonearbud",amzonearbuds);
- -->
-<div class="category-heading my-4">
-<h3>EarBuds List</h3>
-</div>
-			
-			 <div class="container mb-3">
-    <div class="row  ">
-    <c:forEach items="${amzonearbud}" var="amzonearbuds"> 
-    
-        <div class="col coll">
-        <a href="/earbuds/${amzonearbuds.modelName}" >
-	 
-            <div class="card" style="width: 18rem;">
-          
-                    <img src="image/category-smartphones.jpg" class="card-img-top" alt="...">
-                
-               <%-- <img width="100" height="100" src="getStudentPhoto/<c:out value='${phones.id}'/>"> --%>
-                <div class="card-body">
-                    <h5 class="card-title">${amzonearbuds.modelName}</h5>
-
-                </div>
-                <ul class="list-group list-group-flush">
-                     <li class="list-group-item">${amzonearbuds.withmic}</li>
-                    <li class="list-group-item">${amzonearbuds.dynamicdriver}</li>
-                    <li class="list-group-item">${amzonearbuds.gamingmode}</li>
-                    <li class="list-group-item">${amzonearbuds.voiceassistance}</li>
-                </ul>
-               
-            </div>
-            
-               </a>
-        </div>
-      
-        </c:forEach> 
-       
-    </div>
-</div>
-			
-			
-			
-			
-		
-			
-
-	
-
-
-
-
-
 
     
-
-
-
-
-<div class="contact bmargin" style="background-color: rgb(229, 229, 229);" id="contact">
+    
+    <!-- ------------------------contact us--------------------------------- -->
+<div class="contact bmargin" style="background-color: rgb(210, 210, 210);" id="contact">
     <section class="contacts">
         <div class="container">
             <div class="row ">
@@ -188,21 +560,21 @@
                     </div>
                 </div>
                 <div class="bgc col-sm-12 col-md-5 col-lg-4 ltblue wow fadeInDown"
-                    style="visibility: visible; animation-name: fadeInDown; background-color: rgb(200, 200, 200);">
+                    style="visibility: visible; animation-name: fadeInDown; background-color: rgb(160, 160, 160);">
                     <div class="addrs-info"><br>
                         <h3 id="contactm">Contact Us</h3><br>
                         <ul class="list-unstyled">
-                            <li class="map"><span class="bi bi-geo-alt"></span>
+                            <li class="map d-flex"><img class="m-1" style="height: 20px;" src="image/maps-and-flags.png" alt="">
                                 <a href="https://goo.gl/maps/BS86PHjsHBgeBPDH8" target="_blank"
-                                    rel="noreferrer noopener" class="nav-link" id="fh">
-                                    <p>ABC , Priya Darshani Nagar, Kaliket Nagar, Danapur , Patna, Bihar 801503</p>
+                                    rel="noreferrer noopener" class="nav-link fw-medium" id="fh">
+                                    <p>ABC , Priya Darshani Nagar, Danapur , Patna, Bihar 801503</p>
                                 </a>
                             </li>
-                            <li class="mob"><i class="bi bi-phone icony"></i>
+                            <li class="mob fw-medium d-flex"><img class="m-1" style="height: 20px;" src="image/telephone.png" alt="">
                                 <p>+91 9123193296</p>
                             </li>
-                            <li class="mail"><i class="bi bi-envelope icony"></i>
-                                <a href="https://mail.google.com/mail/" target="_blank" rel="noreferrer noopener" class="nav-link" id="fh">
+                            <li class="mail d-flex"><img class="m-1 me-2" src="image/email.png" style="height: 20px;" alt="">
+                                <a href="https://mail.google.com/mail/" target="_blank" rel="noreferrer noopener" class="nav-link fw-medium" id="fh">
                                     <p>deepakkumarj924@gmail.com</p>
                                 </a>
                             </li>
@@ -219,12 +591,11 @@
 
 
 
-
     
 
 
-   
-    <div class="container-fluid bg-dark" id="about">
+  <!-- ------------------------about us---------------------------------- -->  
+    <div class="container-fluid bg-black" id="about">
         <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
             <div class="row">
                 <div class="col mb-3">
@@ -249,7 +620,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-2 "><a class="nav-link " style="color: rgb(210, 210, 210);" href="#" id="fh">Home</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#contact" id="fh">Contact</a></li>
-                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#" id="fh">Products</a></li>
+                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="/docs/5.3/examples/" id="fh">Products</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#about" id="fh">About</a></li>
 
                     </ul>
@@ -278,43 +649,29 @@
 
 
 
-        <div class="container">
+   
+    
+ 
+
+
+ <!-- ------------------------footer---------------------------------- -->
+        <div class="container bg-dark">
             <footer class="d-flex flex-wrap justify-content-between  align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
+                <div class="col-md-4 d-flex align-items-center ">
                     <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">© 2024 Company, Inc</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a href="#"><a class="" href="#">
-                                <img src="image/logo-no-background.png" alt="Bootstrap" width="60">
+                    <li class="ms-3"><a class="" href="#">
+                                
                             </a></li>
                 </ul>
             </footer>
         </div>
-    </div>
     
-    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-    	  let currentIndex = 0;
-    	  const images = document.querySelectorAll(".carousel-image");
+    
+    
+    
 
-    	  // Show the first image initially
-    	  images[currentIndex].classList.add("active");
-
-    	  // Function to show next image
-    	  function showNextImage() {
-    	    images[currentIndex].classList.remove("active");
-    	    currentIndex = (currentIndex + 1) % images.length;
-    	    images[currentIndex].classList.add("active");
-    	  }
-
-    	  // Automatically change image every 3 seconds (adjust as needed)
-    	  setInterval(showNextImage, 3000);
-    	});
-    
-    </script>
-    
-    
 </body>
-
 </html>

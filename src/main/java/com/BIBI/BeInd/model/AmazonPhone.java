@@ -1,7 +1,8 @@
 package com.BIBI.BeInd.model;
 
 
-import java.util.Arrays;
+import java.sql.Blob;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +30,7 @@ import jakarta.persistence.Id;
 		private	String description;//front camera
 		private	String price;//rear camera
 		private	String link;//display
-		private  byte[]  img;
+		private  Blob  img;
 		public Integer getId() {
 			return id;
 		}
@@ -108,15 +109,15 @@ import jakarta.persistence.Id;
 		public void setLink(String link) {
 			this.link = link;
 		}
-		public byte[] getImg() {
+		public Blob getImg() {
 			return img;
 		}
-		public void setImg(byte[] img) {
+		public void setImg(Blob img) {
 			this.img = img;
 		}
 		public AmazonPhone(Integer id, String modelName, String ram, String rom, String processor, String battery,
 				String camera, String display, String sim, String networktype, String description, String price,
-				String link, byte[] img) {
+				String link, Blob img) {
 			super();
 			this.id = id;
 			this.modelName = modelName;
@@ -142,8 +143,10 @@ import jakarta.persistence.Id;
 			return "AmazonPhone [id=" + id + ", modelName=" + modelName + ", ram=" + ram + ", rom=" + rom
 					+ ", processor=" + processor + ", battery=" + battery + ", camera=" + camera + ", display="
 					+ display + ", sim=" + sim + ", networktype=" + networktype + ", description=" + description
-					+ ", price=" + price + ", link=" + link + ", img=" + Arrays.toString(img) + "]";
+					+ ", price=" + price + ", link=" + link + ", img=" + img + "]";
 		}
+       
+		
 		
 		
 		

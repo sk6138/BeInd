@@ -1,6 +1,7 @@
 package com.BIBI.BeInd.model;
 
 
+import java.sql.Blob;
 import java.util.Arrays;
 
 import jakarta.persistence.Entity;
@@ -22,12 +23,14 @@ import jakarta.persistence.Id;
 		private	String rom;//description
 		private	String processor;//processor
 		private	String battery;//Ram  Rom
+		private String camera;
+		private String display;
 		private	String sim;//battery
 		private	String networktype;//andriodV
 		private	String description;//front camera
 		private	String price;//rear camera
 		private	String link;//display
-		private  byte[]  img;
+		private  Blob  img;
 		public Integer getId() {
 			return id;
 		}
@@ -64,6 +67,18 @@ import jakarta.persistence.Id;
 		public void setBattery(String battery) {
 			this.battery = battery;
 		}
+		public String getCamera() {
+			return camera;
+		}
+		public void setCamera(String camera) {
+			this.camera = camera;
+		}
+		public String getDisplay() {
+			return display;
+		}
+		public void setDisplay(String display) {
+			this.display = display;
+		}
 		public String getSim() {
 			return sim;
 		}
@@ -76,10 +91,10 @@ import jakarta.persistence.Id;
 		public void setNetworktype(String networktype) {
 			this.networktype = networktype;
 		}
-		public String getdescription() {
+		public String getDescription() {
 			return description;
 		}
-		public void setdescription(String description) {
+		public void setDescription(String description) {
 			this.description = description;
 		}
 		public String getPrice() {
@@ -94,14 +109,15 @@ import jakarta.persistence.Id;
 		public void setLink(String link) {
 			this.link = link;
 		}
-		public byte[] getImg() {
+		public Blob getImg() {
 			return img;
 		}
-		public void setImg(byte[] img) {
+		public void setImg(Blob img) {
 			this.img = img;
 		}
 		public FlipkartPhone(Integer id, String modelName, String ram, String rom, String processor, String battery,
-				String sim, String networktype, String description, String price, String link, byte[] img) {
+				String camera, String display, String sim, String networktype, String description, String price,
+				String link, Blob img) {
 			super();
 			this.id = id;
 			this.modelName = modelName;
@@ -109,6 +125,8 @@ import jakarta.persistence.Id;
 			this.rom = rom;
 			this.processor = processor;
 			this.battery = battery;
+			this.camera = camera;
+			this.display = display;
 			this.sim = sim;
 			this.networktype = networktype;
 			this.description = description;
@@ -123,10 +141,16 @@ import jakarta.persistence.Id;
 		@Override
 		public String toString() {
 			return "FlipkartPhone [id=" + id + ", modelName=" + modelName + ", ram=" + ram + ", rom=" + rom
-					+ ", processor=" + processor + ", battery=" + battery + ", sim=" + sim + ", networktype="
-					+ networktype + ", description=" + description + ", price=" + price + ", link=" + link
-					+ ", img=" + Arrays.toString(img) + "]";
+					+ ", processor=" + processor + ", battery=" + battery + ", camera=" + camera + ", display="
+					+ display + ", sim=" + sim + ", networktype=" + networktype + ", description=" + description
+					+ ", price=" + price + ", link=" + link + ", img=" + img + "]";
 		}
+		
+		
+		
+		
+		
+		
 		
 		
 		

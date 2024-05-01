@@ -1,84 +1,25 @@
-  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-   
-    
-    Home</title>
-    <link rel="shortcut icon" href="image/logo-no-background.png" />
-    <link rel="stylesheet" href="index.css" type="text/css">
-     <link rel="stylesheet" href="category.css" type="text/css">
-    <link rel="stylesheet" href="compare.css" type="text/css">  
+<meta charset="ISO-8859-1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare</title>
+
+<link rel="shortcut icon" href="/image/logo-no-background.png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="demo.css" type="text/css">
 </head>
+ <style>
 
-<style>
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-#fh:hover {
-    color: rgb(253, 88, 17) !important;
-}
-
-#nh:hover {
-    color: rgb(253, 88, 17) !important;
-}
-#nh{
-    color: white;
-}
-
-
-
-.carousel {
-    width: 100%;
-    /* max-width: 600px; */
-    /* Adjust width as needed */
-    margin: 0 auto;
-    /* Center the carousel */
-    overflow: hidden;
-    position: relative;
-    translate: 0px -1px;
-    
-}
-
-
-.carousel-image {
-    width: 100%;
-    display: none;
-    /* object-fit: fill; */
-  
-    /* Hide all images by default */
-}
-
-.carousel-image.active {
-    display: block;
-    /* Display active image */
-}
-
-
-
-.button-show-all{
-    display: flex;
-    justify-content: center;
-}
-.card{
-    /*z-index: -1 !important;*/
-    justify-content: center;
-}
 .category-container{
     width: 100%;
    height: 20vh;
@@ -200,10 +141,8 @@ margin-top: 15px;
 }
 
 
-a{
- color: inherit;
-	text-decoration: inherit;
-}
+
+
 
 .inside-compare-card-container {
     justify-content: space-between;
@@ -248,25 +187,256 @@ a{
     font-size: 1.8rem;
     font-weight: bold;
 }
-.card-img-top{
 
-  width:270px;
-  height: 300px; 
-  margin:auto;
-  object-fit: contain;
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#fh:hover {
+    color: rgb(253, 88, 17) !important;
+}
+
+#nh:hover {
+    color: rgb(253, 88, 17) !important;
+}
+#nh{
+    color: white;
 }
 
 
-</style>
+
+.carousel {
+    width: 100%;
+    /* max-width: 600px; */
+    /* Adjust width as needed */
+    margin: 0 auto;
+    /* Center the carousel */
+    overflow: hidden;
+    position: relative;
+    translate: 0px -1px;
+    
+}
+
+
+.carousel-image {
+    width: 100%;
+    display: none;
+    /* object-fit: fill; */
   
+    /* Hide all images by default */
+}
 
-<body class="">
+.carousel-image.active {
+    display: block;
+    /* Display active image */
+}
 
 
-    <!-- ------------------------Nav Bar---------------------------------- -->
 
-    <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
+.button-show-all{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    /*z-index: -1 !important;*/
+    justify-content: center;
+}
+
+   .compare-card {
+    border: 1px solid rgb(186, 185, 185);
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 40%;
+}
+
+.img-product {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.compare-card-inside {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.compare-card-divider {
+    width: 57%;
+}
+
+.compare-card-logo {
+    height: 40px;
+    padding: 2px;
+}
+
+.table-logo {
+    width: 100%;
+
+
+}
+
+.table-logo tr td {
+    width: 40%;
+}
+
+.table-logo tr {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.compare-card-button {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.compare-card-button:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+.compare-card-price {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.card-icon {
+    width: 20px;
+    margin: 5px;
+}
+
+.key-table tr td {
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.key-specification {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.key-table {
+
+    table-layout: fixed;
+    width: 100%;
+}
+
+.key-table tr td {
+
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+
+
+}
+
+.key-table tr {
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 667px) {
+    .compare-card-inside {
+        display: block !important;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .card-icon {
+        width: 15px;
+        margin: 5px;
+    }
+
+    .compare-card-divider {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f4f4f4;
+     margin: 0;
+     padding: 0;
+ }
+
+ h2 {
+     text-align: center;
+     color: #333;
+ }
+
+ /* form {
+     max-width: 600px;
+     margin: 20px auto;
+     background: #fff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ } */
+
+ label {
+     display: block;
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ input[type="text"],
+ input[type="url"],
+ input[type="number"],
+ textarea {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+
+ textarea {
+     resize: vertical;
+     height: 100px;
+ }
+
+ input[type="submit"] {
+     background-color: #4caf50;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     width: 100%;
+     font-size: 16px;
+ }
+
+ input[type="submit"]:hover {
+     background-color: #45a049;
+ }
+  .product-image{
+  margin:auto;
+  width:500px;
+  height: 650px;   
+  object-fit: contain;
+ }
+ .compare-card-divider{
+ margin:auto;
+ }
+ 
+    
+</style> 
+<body>
+
+
+       <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="m-2 ">
             <a class="ms-2  " href="/">
                 <img src="/image/logo-no-background.png" alt="Bootstrap" width="60">
@@ -312,244 +482,169 @@ a{
     </nav>
 
    
+   <!--  model.addAttribute("Aspeakers", Aspeakers2);
+		model.addAttribute("Aheadphones", Aheadphones2);
+		model.addAttribute("Aearbuds", Aearbuds2);
+		model.addAttribute("Fheadphones", Fheadphones2);
+		model.addAttribute("Fearbuds", Fearbuds2);
+		model.addAttribute("Fspeakers", Fspeakers2);
+		model.addAttribute("alls", all);
+		model.addAttribute("all2s", all2); -->
     
     
     
-    
-    
-    
-     <!-- ------------------------Carousel ---------------------------------- -->
-
-
- <div class="carousel" style="width: 100%; height: 70vh; border: none;">
-    
-    <img class="carousel-image" src="image/c4.png" alt="Image 1">
-    <img class="carousel-image" src="image/c2.png" alt="Image 2">
-    <img class="carousel-image" src="image/c3.png" alt="Image 3">
-    
-</div>
-<!-- <script src="index.js"></script> --> 
-<script type="text/javascript">document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const images = document.querySelectorAll(".carousel-image");
   
-    // Show the first image initially
-    images[currentIndex].classList.add("active");
   
-    // Function to show next image
-    function showNextImage() {
-      images[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add("active");
-    }
+   <c:forEach items="${Aheadphones}" var="Aheadphones2"> 
+              <c:forEach items="${Fheadphones}" var="Fheadphones2"> 
   
-    // Automatically change image every 3 seconds (adjust as needed)
-    setInterval(showNextImage, 3000);
-  });
-  </script>
-
-
-    
-
-
-
-
- <!-- ------------------------catogery---------------------------------- -->
-
-<div class="category-heading my-4">
-<h3>Product Categories</h3>
-</div>
-<div class="category-container mb-5">
-    
-    <div class="inside-category-container">
-        <div class="inside-category-divider">
-            <div class="category-card category-card-1">
-                <div class="category-card-hover">
-                    <span> <a href="/phone">SMART PHONES</a></span>
-                </div>
-            </div>
-
-            <div class="category-card category-card-2">
-                <div class="category-card-hover">
-                     <span> <a href="/laptop">HEADPHONE</a></span>
-                </div>
-            </div>
-        </div>
-        <div class="inside-category-divider">
-            <div class="category-card category-card-3">
-                <div class="category-card-hover">
-                     <span> <a href="#">EARBUDS</a></span>
-                </div>
-            </div>
-            <div class="category-card category-card-4">
-                <div class="category-card-hover">
-                     <span> <a href="/speaker">SPEAKERS</a></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
- <!-- ------------------------smartphone category---------------------------------- -->
-
-<div class="container p-h-m" >
-    <h4 id="smartphonelink">SMART PHONES</h4>
-</div>
-
-<!-- <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div> -->
-  <div class="container mb-3">
-    <div class="row  ">
-    <c:forEach begin="0" end="3" items="${phone2}" var="phones2"> 
-        <div class="col coll">
-        <a href="/${phones2.modelName}" >
-        
-	 
-            <div class="card" style="width: 18rem;">
-
-                  <img src="image/p${phones2.id}.jpeg" class="card-img-top" alt="..." width="auto" height="auto">  
-                 
-                <div class="card-body">
-                    <h5 class="card-title">${phones2.modelName}</h5>
-
-                </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item">${phones2.ram} | ${phones2.rom}</li>
-                    <li class="list-group-item">${phones2.camera}</li>
-                    <li class="list-group-item">${phones2.processor}</li>
-                    
-                </ul>
-            </div>
-                </a> 
-            </div>
+    <div class="container compare-card my-2 mb-5">
+        <div class="d-flex compare-card-inside">
+            <div class="product-image d-flex"><img src="/image/h${Fheadphones2.id}.jpeg" alt="" class="img-product"></div>
+            <div class="compare-card-divider">
             
-            </c:forEach>  
-        </div>
-        
-       
-    </div> 
-
-
-<div class="button-show-all mb-5 my-4"><button type="button" class="btn btn-outline-dark">
-<a href="/phone">Show All</a>
-</button></div>
-
-
- 
-
-
-
- <!-- ------------------------headphone category---------------------------------- -->
-
-<div class="container">
-    <h4 id="headphonelink">Headphone</h4>
-</div>
-<div class="container mb-3">
-    <div class="row  ">
-        <c:forEach begin="0" end="3" items="${headphone2}" var="headphones2"> 
-        <div class="col coll">
-        <a href="/headphone/${headphones2.modelName}" >
-        
-	 
-            <div class="card" style="width: 18rem;">
-                 <img src="image/h${headphones2.id}.jpeg" class="card-img-top" alt="..."> 
-                <div class="card-body">
-                    <h5 class="card-title">${headphones2.modelName}</h5>
-
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">${headphones2.poweroutput}</li>
-                    <li class="list-group-item">${headphones2.wirelessrange}</li>
-                    <li class="list-group-item">${headphones2.blutoothversion}</li>
-                    <li class="list-group-item">${headphones2.batterylife}</li>
-                   
-                </ul>
-               
-            </div>
-            </a>
-             
-        </div>
-        </c:forEach> 
-    </div>
-</div>
-<div class="button-show-all mb-5 my-4"><button type="button" class="btn btn-outline-dark">
-<a href="/laptop">Show All</a>
-</button></div>
-
-
-
-
-
-
-
-
- <!-- ------------------------speaker category---------------------------------- -->
-
-<div class="container">
-    <h4 id="speakerlink">SPEAKERS</h4>
-</div>
-<div class="container mb-3">
-    <div class="row  ">
-        <c:forEach begin="0" end="3" items="${speaker2}" var="speakers2"> 
-        <div class="col coll">
-        <a href="/speaker/${speakers2.modelName}" >
-        
-	 
-            <div class="card" style="width: 18rem;">
-                 <img src="image/sp${speakers2.id}.jpeg" class="card-img-top" alt="..."> 
-                <div class="card-body">
-                    <h5 class="card-title">${speakers2.modelName}</h5>
-
-                </div>
-                <ul class="list-group list-group-flush">
-                     <li class="list-group-item">${speakers2.poweroutput} </li>
-                    <li class="list-group-item">${speakers2.wirelessrange}</li>
-                    <li class="list-group-item">${speakers2.blutoothversion}</li> 
-                    <li class="list-group-item">${speakers2.batterylife}</li> 
-                    
-                    
-                </ul>
-               
-            </div>
-            
-             </a>
-        </div>
-        </c:forEach> 
-    </div>
-</div>
-<div class="button-show-all mb-5 my-4"><button type="button" class="btn btn-outline-dark">
-<a href="/speaker">Show All</a>
-</button></div>
-
-
+            <!--  model.addAttribute("Aheadphones", Aheadphones2);
+        	 model.addAttribute("Fheadphones", Fheadphones2); -->
+    
+  
      
-
-
-
+                <div>
+                    <p class="fs-4 fw-bold">${Fheadphones2.modelName}</p>
+                </div>
+                <div class="">
+                    <table class=" table-logo">
+                        <tr>
+                            <td><img src="/image/a1.jpeg" alt="" class="compare-card-logo"></td>
+                            <td>
+                                <p class="compare-card-price">
+                                
+                                <c:if test="${empty Aheadphones2.price}">
+                                     not available
+                                   </c:if>
+                                   <c:if test="${not empty Aheadphones2.price}">
+                                     &#8377;   ${Aheadphones2.price}
+                                   </c:if>
+                              </p>
+                            </td>
+                            <td><a href="${Aheadphones2.link}"><button class=" compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="/image/a2.jpeg" alt="" class="compare-card-logo"></td>
+                            <td>
+                                <p class="compare-card-price">
+                                 <c:if test="${empty Fheadphones2.price}">
+                                     not available
+                                   </c:if>
+                                   <c:if test="${not empty Fheadphones2.price}">
+                                     &#8377;   ${Fheadphones2.price}
+                                   </c:if>
+                                
+                                </p>
+                            </td>
+                            <td><a href="${Fheadphones2.link}"><button class="compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="my-4 ">
+                    <div class="mb-2 key-specification"> KEY SPECIFICATION</div>
+                    <table class=" key-table">
+                    
+                    <tr>
+                        <td><img class="card-icon" src="image/processor.png" alt=""><span>${Fheadphones2.poweroutput}</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/display-size.png" alt=""><span>${Fheadphones2.blutoothversion}</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span>${Fheadphones2.batterylife}</span></td>
+                       
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/lighting.png" alt=""><span>${Fheadphones2.wirelessrange}</span></td>
+                        
+                    </tr>
+                    </table>
+                </div>
+                </c:forEach> 
+                </c:forEach>
  
+     
+     
+     
+     
+     <%--   <c:if test="${not empty Fheadphones }">
+  
+      <c:forEach items="${Fheadphones}" var="Fheadphones2"> 
+              <c:forEach items="${Aheadphones}" var="Aheadphones2"> 
+                <div>
+                    <p class="fs-4 fw-bold">${Aheadphones2.modelName}</p>
+                </div>
+                <div class="">
+                    <table class=" table-logo">
+                        <tr>
+                            <td><img src="image/a1.jpeg" alt="" class="compare-card-logo"></td>
+                            <td>
+                                <p class="compare-card-price">&#8377; ${Aheadphones2.price}</p>
+                            </td>
+                            <td><a href="${Aheadphones2.link}"><button class=" compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="image/a2.jpeg" alt="" class="compare-card-logo"></td>
+                            <td>
+                                <p class="compare-card-price">&#8377; ${Fheadphones2.price}</p>
+                            </td>
+                            <td><a href="${Fheadphones2.link}"><button class="compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="my-4 ">
+                    <div class="mb-2 key-specification"> KEY SPECIFICATION</div>
+                    <table class=" key-table">
+                    
+                    <tr>
+                        <td><img class="card-icon" src="image/processor.png" alt=""><span></span></td>
+                        <td><img class="card-icon" src="image/ram.png" alt=""><span></span></td>
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/display-size.png" alt=""><span></span></td>
+                        <td><img class="card-icon" src="image/sim.png" alt=""><span></span></td>
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span></span></td>
+                        <td><img class="card-icon" src="image/front-camera.png" alt=""><span></span></td>
+                    </tr>
+                    <tr>
+                        <td><img class="card-icon" src="image/lighting.png" alt=""><span></span></td>
+                        
+                    </tr>
+                    </table>
+                </div>
+                </c:forEach> 
+                </c:forEach>
+ 
+     </c:if> --%>
+     
+     
+     
+     
+            
+           
+            </div>
+        </div>
+    </div>
 
 
 
- <!-- ------------------------contact us--------------------------------- -->
+
+
+   
+
+
+    
+    
+    <!-- ------------------------contact us--------------------------------- -->
 <div class="contact bmargin" style="background-color: rgb(210, 210, 210);" id="contact">
     <section class="contacts">
         <div class="container">
@@ -594,16 +689,16 @@ a{
                     <div class="addrs-info"><br>
                         <h3 id="contactm">Contact Us</h3><br>
                         <ul class="list-unstyled">
-                            <li class="map d-flex"><img class="m-1" style="height: 20px;" src="image/maps-and-flags.png" alt="">
+                            <li class="map d-flex"><img class="m-1" style="height: 20px;" src="/image/maps-and-flags.png" alt="">
                                 <a href="https://goo.gl/maps/BS86PHjsHBgeBPDH8" target="_blank"
                                     rel="noreferrer noopener" class="nav-link fw-medium" id="fh">
                                     <p>ABC , Priya Darshani Nagar, Danapur , Patna, Bihar 801503</p>
                                 </a>
                             </li>
-                            <li class="mob fw-medium d-flex"><img class="m-1" style="height: 20px;" src="image/telephone.png" alt="">
+                            <li class="mob fw-medium d-flex"><img class="m-1" style="height: 20px;" src="/image/telephone.png" alt="">
                                 <p>+91 9123193296</p>
                             </li>
-                            <li class="mail d-flex"><img class="m-1 me-2" src="image/email.png" style="height: 20px;" alt="">
+                            <li class="mail d-flex"><img class="m-1 me-2" src="/image/email.png" style="height: 20px;" alt="">
                                 <a href="https://mail.google.com/mail/" target="_blank" rel="noreferrer noopener" class="nav-link fw-medium" id="fh">
                                     <p>deepakkumarj924@gmail.com</p>
                                 </a>
@@ -631,7 +726,7 @@ a{
                 <div class="col mb-3">
                     <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
                         aria-label="Bootstrap">
-                        <img src="image/logo-no-background.png" alt="Bootstrap" width="80">
+                        <img src="/image/logo-no-background.png" alt="Bootstrap" width="80">
                         <span class="fs-5" style="color: white;">Be Indian Buy Indian</span>
                     </a>
                     <ul class="list-unstyled small" style="color: rgb(210, 210, 210);">
@@ -659,14 +754,14 @@ a{
                     <div class="d-flex align-items-center justify-content-end ">
 
                         <ul class="list-unstyled d-flex  ">
-                            <li class="mb-2 me-3"><a href="/"><img src="image/instagram.png" alt="Bootstrap"
+                            <li class="mb-2 me-3"><a href="/"><img src="/image/instagram.png" alt="Bootstrap"
                                         width="55"></a></li>
-                            <li class="mb-2 me-3"><a href="/docs/5.3/"><img src="image/facebook.png"
+                            <li class="mb-2 me-3"><a href="/docs/5.3/"><img src="/image/facebook.png"
                                         alt="Bootstrap" width="55"></a></li>
-                            <li class="mb-2 me-3"><a href="/docs/5.3/examples/"><img src="image/twitter.png"
+                            <li class="mb-2 me-3"><a href="/docs/5.3/examples/"><img src="/image/twitter.png"
                                         alt="Bootstrap" width="55"></a></li>
                             <li class="mb-2 me-3"><a href="https://icons.getbootstrap.com/"><img
-                                        src="image/snapchat.png" alt="Bootstrap" width="55"></a></li>
+                                        src="/image/snapchat.png" alt="Bootstrap" width="55"></a></li>
 
                         </ul>
                     </div>
@@ -678,25 +773,30 @@ a{
 
 
 
+
+   
+    
+ 
+
+
  <!-- ------------------------footer---------------------------------- -->
-        <div class="container">
+        <div class="container bg-dark">
             <footer class="d-flex flex-wrap justify-content-between  align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
+                <div class="col-md-4 d-flex align-items-center ">
                     <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">© 2024 Company, Inc</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                     <li class="ms-3"><a class="" href="#">
-                                <img src="image/logo-no-background.png" alt="Bootstrap" width="60">
+                                
                             </a></li>
                 </ul>
             </footer>
         </div>
-    </div>
+    
+    
+    
     
 
-    
-    
 </body>
-
 </html>

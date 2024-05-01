@@ -7,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Speaker</title>
+    <link rel="shortcut icon" href="image/logo-no-background.png" />
     <link rel="stylesheet" href="index.css" type="text/css">
     <link rel="stylesheet" href="compare.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,6 +18,14 @@
         crossorigin="anonymous"></script>
   
 </head>
+<style>
+
+a{
+ color: inherit;
+	text-decoration: inherit;
+}
+
+</style>
   
 
 <body class="">
@@ -24,7 +33,10 @@
 
     
 
-    <nav class="navbar navbar-expand-lg  bg-dark border-bottom border-body" data-bs-theme="dark">
+    
+    <!-- ------------------------Nav Bar---------------------------------- -->
+
+    <nav class="navbar navbar-expand-lg  bg-black border-bottom border-body" data-bs-theme="dark">
         <div class="m-2 ">
             <a class="ms-2  " href="/">
                 <img src="/image/logo-no-background.png" alt="Bootstrap" width="60">
@@ -47,12 +59,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="nh">
-                            Link
+                            Products
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/phone" id="nh">Smart Phone</a></li>
-                            <li><a class="dropdown-item" href="/laptop" id="nh">Laptop</a></li>
-                            <li><a class="dropdown-item" href="/EarBuds" id="nh">EarBuds</a></li>
+                            
+                           <li><a class="dropdown-item" href="/phone" id="nh">Smart Phone</a></li>
+                            <li><a class="dropdown-item" href="/laptop" id="nh">Headphone</a></li>
+                            <li><a class="dropdown-item" href="#" id="nh">EarBuds</a></li>
                             <li><a class="dropdown-item" href="/speaker" id="nh">Speaker</a></li>
                         </ul>
                     </li>
@@ -60,33 +73,30 @@
                         <a class="nav-link " href="#about" id="nh">About</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex " role="search">
-                    <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light btn-dark" type="submit">Search</button>
-                </form> -->
-                <form class="d-flex " role="search" method="post" action="/all">
+                <form class="d-flex " role="search" method="post" action="/search">
                     <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn btn-outline-light btn-dark" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
+    
 
-    </div>
-
-<div class="carousel" style="width: 100%; height: 70vh; border: none;">
+<!-- <div class="carousel" style="width: 100%; height: 70vh; border: none;">
     
     <img class="carousel-image" src="image/c4.png" alt="Image 1">
     <img class="carousel-image" src="image/c2.png" alt="Image 2">
     <img class="carousel-image" src="image/c3.png" alt="Image 3">
     
 </div>
-<script src="index.js"></script>
+<script src="index.js"></script> -->
 
 
 
 
-<h1>speaker list</h1>
+<div class="category-heading my-4">
+<h3>Speaker List</h3>
+</div>
 
 <%-- <table class="table">
 		<thead>
@@ -122,7 +132,7 @@
 
 	</table> --%>
 
-
+<%--  test
     	 <div class="container">
     <div class="row  ">
 		
@@ -136,16 +146,13 @@
 
                 </div>
                 <ul class="list-group list-group-flush">
-                      <li class="list-group-item">${speakers.col3}</li>
+                       <li class="list-group-item">${speakers.col3}</li>
                     <li class="list-group-item">${speakers.col2}</li>
                     <li class="list-group-item">${speakers.col4} </li>
                     <li class="list-group-item">${speakers.col6} </li>
-                    <li class="list-group-item">${speakers.col7} </li>
+                    <li class="list-group-item">${speakers.col7} </li> 
                 </ul>
-                <%-- <div class="card-body">
-                    <a href="#" class="${speakers.link}">flipkart</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div> --%>
+               
             </div>
         </div>
         
@@ -154,11 +161,39 @@
 			</c:forEach>  
 			
 			</div>
-			</div>
+			</div> --%>
     
 
 
+<div class="container m-auto">
+    <div class="row  ">
+        <c:forEach  items="${speaker}" var="speakers"> 
+        <div class="col coll">
+        <a href="/speaker/${speakers.modelName}" >
+        
+	 
+            <div class="card" style="width: 18rem;">
+                 <img src="image/sp${speakers.id}.jpeg" class="card-img-top" alt="..."> 
+                <div class="card-body">
+                    <h5 class="card-title">${speakers.modelName}</h5>
 
+                </div>
+                <ul class="list-group list-group-flush">
+                     <li class="list-group-item">${speakers.poweroutput} </li>
+                    <li class="list-group-item">${speakers.wirelessrange}</li>
+                    <li class="list-group-item">${speakers.blutoothversion}</li> 
+                    <li class="list-group-item">${speakers.batterylife}</li> 
+                    
+                    
+                </ul>
+               
+            </div>
+            
+             </a>
+        </div>
+        </c:forEach> 
+    </div>
+</div>
     
 
 
@@ -174,7 +209,7 @@
                     <div class="contact-info"><br>
                         <h3>Quick Contact</h3>
                         <form class="contact-form" method="post" name="contact_frm" id="contact_frm"
-                            action="https://formspree.io/f/xrgdzbvl">
+                            action="/contact">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="md-form mb-0"><input type="text" id="name" name="name"
@@ -265,7 +300,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-2 "><a class="nav-link " style="color: rgb(210, 210, 210);" href="#" id="fh">Home</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#contact" id="fh">Contact</a></li>
-                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="/docs/5.3/examples/" id="fh">Products</a></li>
+                        <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#" id="fh">Products</a></li>
                         <li class="mb-2"><a class="nav-link" style="color: rgb(210, 210, 210);" href="#about" id="fh">About</a></li>
 
                     </ul>
