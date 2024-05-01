@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.BIBI.BeInd.model.AmazonEarBuds;
-import com.BIBI.BeInd.model.AmazonSpeaker;
+
 
 
 

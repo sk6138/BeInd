@@ -85,7 +85,7 @@ public class AmazonSpeaker {
 	}
 	public AmazonSpeaker() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 	public AmazonSpeaker(Integer id, String modelName, String poweroutput, String batterylife, String blutoothversion,
 			String wirelessrange, String price, String link, Blob img) {

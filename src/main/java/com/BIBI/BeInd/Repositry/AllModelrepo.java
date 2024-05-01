@@ -15,7 +15,7 @@ import com.BIBI.BeInd.model.AllModel;
 
 
 
-public interface AllModelrepo  extends JpaRepository<AllModel, String>{
+public interface AllModelrepo  extends JpaRepository<AllModel, Integer>{
 
 	
 	  public List<AllModel> findByCol1ContainingIgnoreCase (String query);

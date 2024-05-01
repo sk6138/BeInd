@@ -85,7 +85,7 @@ public class FlipkartSpeaker {
 	}
 	public FlipkartSpeaker() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public FlipkartSpeaker(Integer id, String modelName, String poweroutput, String batterylife, String blutoothversion,
 			String wirelessrange, String price, String link, Blob img) {

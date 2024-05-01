@@ -42,7 +42,7 @@ public void setMessage(String message) {
 }
 public contact() {
 	super();
-	// TODO Auto-generated constructor stub
+	
 }
 public contact(String name, String phone, String email, String message) {
 	super();

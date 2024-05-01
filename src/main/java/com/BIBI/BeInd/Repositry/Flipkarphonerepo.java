@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.BIBI.BeInd.model.FlipkartPhone;
 
-public interface Flipkarphonerepo  extends JpaRepository<FlipkartPhone, String>{
+public interface Flipkarphonerepo  extends JpaRepository<FlipkartPhone, Integer>{
 
 	
 

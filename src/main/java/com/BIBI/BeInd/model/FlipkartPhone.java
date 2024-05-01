@@ -2,7 +2,7 @@ package com.BIBI.BeInd.model;
 
 
 import java.sql.Blob;
-import java.util.Arrays;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -136,7 +136,7 @@ import jakarta.persistence.Id;
 		}
 		public FlipkartPhone() {
 			super();
-			// TODO Auto-generated constructor stub
+			
 		}
 		@Override
 		public String toString() {

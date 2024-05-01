@@ -12,7 +12,7 @@ import com.BIBI.BeInd.model.AmazonPhone;
 
 
 
-public interface Amazonphonerepo  extends JpaRepository<AmazonPhone, String>{
+public interface Amazonphonerepo  extends JpaRepository<AmazonPhone, Integer>{
 
 	
 

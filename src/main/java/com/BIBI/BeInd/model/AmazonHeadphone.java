@@ -89,7 +89,7 @@ public class AmazonHeadphone {
 	
 	public AmazonHeadphone() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public AmazonHeadphone(Integer id, String modelName, String poweroutput, String batterylife, String blutoothversion,
 			String wirelessrange, String price, String link) {

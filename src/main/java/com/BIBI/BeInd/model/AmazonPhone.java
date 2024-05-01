@@ -136,7 +136,7 @@ import jakarta.persistence.Id;
 		}
 		public AmazonPhone() {
 			super();
-			// TODO Auto-generated constructor stub
+			
 		}
 		@Override
 		public String toString() {

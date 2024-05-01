@@ -85,7 +85,7 @@ public class FlipkartHeadphone {
 	}
 	public FlipkartHeadphone() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public FlipkartHeadphone(Integer id, String modelName, String poweroutput, String batterylife, String blutoothversion,
 			String wirelessrange, String price, String link, Blob img) {

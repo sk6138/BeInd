@@ -112,7 +112,7 @@ import jakarta.persistence.Id;
 
 		public AmazonEarBuds() {
 			super();
-			// TODO Auto-generated constructor stub
+			
 		}
 
 		public AmazonEarBuds(Integer id, String modelName, String withmic, String dynamicdriver, String gamingmode,
