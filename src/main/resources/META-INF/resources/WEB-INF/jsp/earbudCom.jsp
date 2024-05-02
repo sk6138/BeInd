@@ -1,4 +1,4 @@
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compare</title>
 <link rel="shortcut icon" href="image/logo-no-background.png" />
+<link rel="stylesheet" href="/src/main/resources/static/index.css" type="text/css">
+<link rel="stylesheet" href="/src/main/resources/static/category.css" type="text/css">
+<link rel="stylesheet" href="/src/main/resources/static/compare.css" type="text/css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -17,7 +20,7 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="demo.css" type="text/css">
 </head>
- <style>
+ <!-- <style>
 
 .category-container{
     width: 100%;
@@ -139,10 +142,6 @@ margin-top: 15px;
   translate: 0px -8px;
 }
 
-
-
-
-
 .inside-compare-card-container {
     justify-content: space-between;
 }
@@ -203,37 +202,6 @@ margin-top: 15px;
 #nh{
     color: white;
 }
-
-
-
-/* .carousel {
-    width: 100%;
-    /* max-width: 600px; */
-    /* Adjust width as needed */
-    /* margin: 0 auto; */
-    /* Center the carousel */
-    /* overflow: hidden;
-    position: relative;
-    translate: 0px -1px; */
-    
-} */
-
-
-/* .carousel-image {
-    width: 100%;
-    display: none;
-    /* object-fit: fill; */
-  
-    /* Hide all images by default */
-} */
-
-/* .carousel-image.active {
-    display: block;
-    /* Display active image */
-} */
-
-
-
 .button-show-all{
     display: flex;
     justify-content: center;
@@ -421,7 +389,7 @@ margin-top: 15px;
      background-color: #45a049;
  }
     
-</style> 
+</style>  -->
 <body>
 
 
@@ -470,31 +438,15 @@ margin-top: 15px;
         </div>
     </nav>
 
-   
-   <!--  model.addAttribute("Aspeakers", Aspeakers2);
-		model.addAttribute("Aheadphones", Aheadphones2);
-		model.addAttribute("Aearbuds", Aearbuds2);
-		model.addAttribute("Fheadphones", Fheadphones2);
-		model.addAttribute("Fearbuds", Fearbuds2);
-		model.addAttribute("Fspeakers", Fspeakers2);
-		model.addAttribute("alls", all);
-		model.addAttribute("all2s", all2); -->
-    
-    
-    
-  
-  
-  
-  
+
+
     <div class="container compare-card my-5 mb-5">
         <div class="d-flex compare-card-inside">
             <div class="product-image d-flex"><img src="/image/category-headphones.jpg" alt="" class="img-product"></div>
             <div class="compare-card-divider">
-        <!--     
-           model.addAttribute("Aearbuds", Aearbuds2);
-		   model.addAttribute("Fearbuds",Fearbuds2);  -->
-    
-  
+
+
+                
       <c:forEach items="${Aearbuds}" var="Aearbuds2"> 
               <c:forEach items="${Fearbuds}" var="Fearbuds2"> 
                 <div>
@@ -723,7 +675,7 @@ margin-top: 15px;
         <div class="container bg-dark">
             <footer class="d-flex flex-wrap justify-content-between  align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center ">
-                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">© 2024 Company, Inc</span>
+                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">ï¿½ 2024 Company, Inc</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

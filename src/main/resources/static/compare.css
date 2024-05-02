@@ -42,3 +42,16 @@
     font-size: 1.8rem;
     font-weight: bold;
 }
+.compare-card-divider{
+    margin:auto;
+    }
+
+    .product-image{
+        margin:auto;
+        width:300px;
+        height: 650px;   
+        object-fit: contain;
+       }
+       .compare-card-divider{
+       margin:auto;
+       }

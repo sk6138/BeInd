@@ -240,7 +240,7 @@ import jakarta.persistence.Id;
 
 		public AllModel() {
 			super();
-			// TODO Auto-generated constructor stub
+			
 		}
 		
 		

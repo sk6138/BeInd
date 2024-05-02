@@ -480,14 +480,7 @@ margin-top: 15px;
     </nav>
 
    
-   <!--  model.addAttribute("Aspeakers", Aspeakers2);
-		model.addAttribute("Aheadphones", Aheadphones2);
-		model.addAttribute("Aearbuds", Aearbuds2);
-		model.addAttribute("Fheadphones", Fheadphones2);
-		model.addAttribute("Fearbuds", Fearbuds2);
-		model.addAttribute("Fspeakers", Fspeakers2);
-		model.addAttribute("alls", all);
-		model.addAttribute("all2s", all2); -->
+  
     
     
     
@@ -500,8 +493,7 @@ margin-top: 15px;
             <div class="product-image d-flex"><img src=""alt="" class="img-product"></div>
             <div class="compare-card-divider">
             
-          <!--   model.addAttribute("Aspeakers", Aspeakers2); 
-		  model.addAttribute("Fspeakers",Fspeakers2); -->
+      
     
   
       <c:forEach items="${Aspeakers}" var="Aspeakers2"> 
@@ -731,7 +723,7 @@ margin-top: 15px;
         <div class="container bg-dark">
             <footer class="d-flex flex-wrap justify-content-between  align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center ">
-                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">© 2024 Company, Inc</span>
+                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">ï¿½ 2024 Company, Inc</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compare</title>
 <link rel="shortcut icon" href="image/logo-no-background.png" />
+<!-- <link rel="stylesheet" href="/src/main/resources/static/index.css" type="text/css"> -->
+<link rel="stylesheet" href="/src/main/resources/static/compare.css" type="text/css">
+<link rel="stylesheet" href="/src/main/resources/static/category.css" type="text/css">
+<link rel="stylesheet" href="/src/main/resources/static/demo.css" type="text/css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -17,7 +21,7 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="demo.css" type="text/css">
 </head>
- <style>
+  <style>
 
 .category-container{
     width: 100%;
@@ -430,7 +434,7 @@ margin-top: 15px;
  margin:auto;
  }
     
-</style> 
+</style>  
 <body>
 
 
@@ -480,14 +484,6 @@ margin-top: 15px;
     </nav>
 
    
-   <!--  model.addAttribute("Aspeakers", Aspeakers2);
-		model.addAttribute("Aheadphones", Aheadphones2);
-		model.addAttribute("Aearbuds", Aearbuds2);
-		model.addAttribute("Fheadphones", Fheadphones2);
-		model.addAttribute("Fearbuds", Fearbuds2);
-		model.addAttribute("Fspeakers", Fspeakers2);
-		model.addAttribute("alls", all);
-		model.addAttribute("all2s", all2); -->
     
     
     
@@ -498,7 +494,8 @@ margin-top: 15px;
   
     <div class="container compare-card my-2 mb-5">
         <div class="d-flex compare-card-inside">
-            <div class="product-image d-flex"><img src="image/p${all.id}.jpeg" alt="" class="img-product" ></div>
+            <!-- <div class="product-image d-flex"><img src="image/p${all.id}.jpeg" alt="" class="img-product" ></div> -->
+            <div class="product-image d-flex"><img src="${all.img}" alt="" class="img-product" ></div>
             
             <div class="compare-card-divider">
             
@@ -508,6 +505,7 @@ margin-top: 15px;
       
                 <div>
                     <p class="fs-4 fw-bold">${all.modelName}</p>
+                   
                 </div>
                 <div class="">
                     <table class=" table-logo">
@@ -570,57 +568,7 @@ margin-top: 15px;
      
      
      
-     <%--   <c:if test="${not empty Fheadphones }">
-  
-      <c:forEach items="${Fheadphones}" var="Fheadphones2"> 
-              <c:forEach items="${Aheadphones}" var="Aheadphones2"> 
-                <div>
-                    <p class="fs-4 fw-bold">${Aheadphones2.modelName}</p>
-                </div>
-                <div class="">
-                    <table class=" table-logo">
-                        <tr>
-                            <td><img src="image/a1.jpeg" alt="" class="compare-card-logo"></td>
-                            <td>
-                                <p class="compare-card-price">&#8377; ${Aheadphones2.price}</p>
-                            </td>
-                            <td><a href="${Aheadphones2.link}"><button class=" compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
-                        </tr>
-                        <tr>
-                            <td><img src="image/a2.jpeg" alt="" class="compare-card-logo"></td>
-                            <td>
-                                <p class="compare-card-price">&#8377; ${Fheadphones2.price}</p>
-                            </td>
-                            <td><a href="${Fheadphones2.link}"><button class="compare-card-button bg-dark text-light" >GO TO STORE ></button></a></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="my-4 ">
-                    <div class="mb-2 key-specification"> KEY SPECIFICATION</div>
-                    <table class=" key-table">
-                    
-                    <tr>
-                        <td><img class="card-icon" src="image/processor.png" alt=""><span></span></td>
-                        <td><img class="card-icon" src="image/ram.png" alt=""><span></span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/display-size.png" alt=""><span></span></td>
-                        <td><img class="card-icon" src="image/sim.png" alt=""><span></span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/rear-camera.png" alt=""><span></span></td>
-                        <td><img class="card-icon" src="image/front-camera.png" alt=""><span></span></td>
-                    </tr>
-                    <tr>
-                        <td><img class="card-icon" src="image/lighting.png" alt=""><span></span></td>
-                        
-                    </tr>
-                    </table>
-                </div>
-                </c:forEach> 
-                </c:forEach>
- 
-     </c:if> --%>
+    
      
      
      
@@ -779,7 +727,7 @@ margin-top: 15px;
         <div class="container bg-dark">
             <footer class="d-flex flex-wrap justify-content-between  align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center ">
-                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">© 2024 Company, Inc</span>
+                    <span class="mb-3 mb-md-0 " style="color: rgb(210, 210, 210);">ï¿½ 2024 Company, Inc</span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

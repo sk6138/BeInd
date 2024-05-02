@@ -176,3 +176,9 @@
  input[type="submit"]:hover {
      background-color: #45a049;
  }
+ .product-image{
+    margin:auto;
+    width:500px;
+    height: 650px;   
+    object-fit: contain;
+   }

@@ -1,7 +1,7 @@
 package com.BIBI.BeInd.controller;
 
 import java.util.ArrayList;
-
+import java.util.Base64;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -164,51 +164,17 @@ public class BEIndController {
 
 		List<FlipkartPhone> all = new ArrayList<FlipkartPhone>();
 		List<AmazonPhone> all2 = new ArrayList<AmazonPhone>();
-		/*
-		 * List<AmazonEarBuds> Aearbuds2 = new ArrayList<AmazonEarBuds>();
-		 * List<AmazonSpeaker> Aspeakers2 = new ArrayList<AmazonSpeaker>();
-		 * List<FlipkartHeadphone> Fheadphones2 = new ArrayList<FlipkartHeadphone>();
-		 * List<FlipkartEarBuds> Fearbuds2 = new ArrayList<FlipkartEarBuds>();
-		 * List<FlipkartSpeaker> Fspeakers2 = new ArrayList<FlipkartSpeaker>();
-		 * List<AmazonHeadphone> Aheadphones2 = new ArrayList<AmazonHeadphone>();
-		 */
-
-		/*
-		 * Aearbuds2.add(ear2.findByModelName(modelName));
-		 * Aspeakers2.add(sp2.findByModelName(modelName));
-		 * Aheadphones2.add(head2.findByModelName(modelName));
-		 * Fheadphones2.add(flipheadphone.findByModelName(modelName));
-		 * Fearbuds2.add(Fear2.findByModelName(modelName));
-		 * Fspeakers2.add(Fsp2.findByModelName(modelName));
-		 */
+		
 		all.add(repo.findByModelName(modelName));
 		all2.add(repo2.findByModelName(modelName));
-		/*
-		 * model.addAttribute("Aearbuds", Aearbuds2);
-		 *  model.addAttribute("Fearbuds",
-		 * Fearbuds2); 
-		 * model.addAttribute("Aheadphones", Aheadphones2);
-		 * model.addAttribute("Fheadphones", Fheadphones2);
-		 * model.addAttribute("Aspeakers", Aspeakers2); 
-		 * model.addAttribute("Fspeakers",
-		 * Fspeakers2);
-		 */
-        
-  		
-  		/*if(all.size() > 0) {*/
+		
        	 model.addAttribute("alls", all);
     		model.addAttribute("all2s", all2);
+
+	// 		byte[] encodeBase64 = Base64.getEncoder().encode(post.get().getImage());
+    // String base64Encoded = new String(encodeBase64, "UTF-8");
+    // model.addAttribute("contentImage", base64Encoded );
        	 return "phonecomp";
-			/* } */
-  		
-  		
-		
-          
-			/*
-			 * return "phonecomp";
-			 */
-         
-		
 	}
 	
 	@GetMapping("/headphone/{modelName}")
@@ -258,73 +224,6 @@ public class BEIndController {
 	
 	
 
-	/*
-	 * @GetMapping("/{modelName}/{ram}/{rom}")
-	 * 
-	 * public String getById(@PathVariable("modelName") String modelName
-	 * ,@PathVariable("ram") String ram,@PathVariable("rom") String rom, ModelMap
-	 * model) {
-	 * 
-	 * 
-	 * List<FlipkartPhone> all = new ArrayList<FlipkartPhone>(); List<AmazonPhone>
-	 * all2 = new ArrayList<AmazonPhone>(); System.out.println(modelName + " " + ram
-	 * + " " + rom);
-	 * 
-	 * all.add(repo.findByModelNameAndRamAndRom(modelName, ram, rom));
-	 * all2.add(repo2.findByModelNameAndRamAndRom(modelName, ram, rom));
-	 * 
-	 * 
-	 * String photoencodeBase64 = FlipkartPhone.getStringPhoto();
-	 * model.addAttribute("accPicture", photoencodeBase64);
-	 * 
-	 * 
-	 * System.out.println(all + " " + all2);
-	 * 
-	 * model.addAttribute("alls", all); model.addAttribute("all2s", all2); return
-	 * "compare"; }
-	 */
-
-	/*
-	 * not relevent
-	 * 
-	 * @GetMapping("/search/{modelName}/{ram}/{rom}")
-	 * 
-	 * public String getById2(@PathVariable("modelName") String modelName,
-	 * 
-	 * @PathVariable("ram") String ram,
-	 * 
-	 * @PathVariable("rom") String rom, ModelMap model) {
-	 * 
-	 * 
-	 * List<AllModel> compare= new ArrayList<>(); List<FlipkartPhone> all = new
-	 * ArrayList<FlipkartPhone>(); List<AmazonPhone> all2 = new
-	 * ArrayList<AmazonPhone>(); System.out.println(modelName+" "+ram + " "+rom);
-	 * all.add( repo.findByModelNameAndRamAndRom(modelName, ram, rom));
-	 * all2.add(repo2.findByModelNameAndRamAndRom(modelName, ram, rom));
-	 * 
-	 * 
-	 * String photoencodeBase64 = FlipkartPhone.getStringPhoto();
-	 * model.addAttribute("accPicture", photoencodeBase64);
-	 * 
-	 * 
-	 * 
-	 * System.out.println(all+" "+all2 );
-	 * 
-	 * model.addAttribute("alls", all); model.addAttribute("all2s", all2); return
-	 * "compare"; }
-	 */
-
-	/*
-	 * @PostMapping("/phone") public String phonelist(@RequestParam("search") String
-	 * query, ModelMap model) { List<FlipkartPhone> phones = new
-	 * ArrayList<FlipkartPhone>();
-	 * phones.addAll(repo.findByCol1ContainingIgnoreCase(query));
-	 * 
-	 * 
-	 * System.out.println(query);
-	 * 
-	 * model.addAttribute("phone", phones); return "phone"; }
-	 */
 
 	
 	  @GetMapping("/laptop") public String laptopList(ModelMap model) {
