@@ -1,7 +1,7 @@
 package com.BIBI.BeInd.controller;
 
 import java.util.ArrayList;
-import java.util.Base64;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,6 +81,7 @@ public class BEIndController {
 	public String insertPhone2() {
 		return "/insertPhone2";
 	}
+	
 
 	/*
 	 * <c:forEach begin="0" end="10" varStatus="loop"> Index: ${loop.index}<br/>
